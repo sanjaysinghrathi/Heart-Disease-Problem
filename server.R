@@ -336,6 +336,8 @@ server <- function(input, output) {
     if (!requireNamespace("Boruta", quietly = TRUE)){
       install.packages("Boruta")}
     library('Boruta')
+    if (!requireNamespace("glmnet", quietly = TRUE)){
+      install.packages("glmnet")}
     library(glmnet)
     
     if(input$model=="Elastic-Net"){
